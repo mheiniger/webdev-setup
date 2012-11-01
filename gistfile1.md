@@ -7,7 +7,8 @@ I hope it's a help also for you!
 #Installation stack
 * [Install PHP Storm](#phpstorm)
 
-#<a name="phpstorm">Install PHP Storm</a>
+<a name="phpstorm"></a>
+##Install PHP Storm
 * Download PHP Storm - http://www.jetbrains.com/phpstorm/
 * Install Sun JDK - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
 
