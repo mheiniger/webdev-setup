@@ -5,20 +5,16 @@ I did it already a few times and i decided to write down the steps for a typical
 I hope it's a help also for you!
 
 #Installation stack
-* [Install PHP Storm](#phpstorm)
+* [PHP Storm](#phpstorm)
+* [Git](#git)
 
 <a name="phpstorm"></a>
-##Install PHP Storm
+##PHP Storm
 * Download PHP Storm - http://www.jetbrains.com/phpstorm/
 * Install Sun JDK - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
 
-#Install Development Environment
-
-OS: Ubuntu 11.10
-Webserver: Apache2
-Environment: Developer machine
-
 ##Installation General Environment
+<a name="git"></a>
 ###git
 sudo apt-get install git
 git config --global color.branch auto
