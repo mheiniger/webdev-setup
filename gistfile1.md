@@ -1,4 +1,13 @@
-#Install PHP Storm
+#Introduction
+If you're a php developer on ubuntu, there comes the time where you have to install/reinstall your system.
+I did it already a few times and i decided to write down the steps for a typical installation stack.
+
+I hope it's a help also for you!
+
+#Installation stack
+* [Install PHP Storm](#phpstorm)
+
+#<a name="phpstorm">Install PHP Storm</a>
 * Download PHP Storm - http://www.jetbrains.com/phpstorm/
 * Install Sun JDK - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
 
