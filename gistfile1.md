@@ -11,10 +11,11 @@ I hope it's a help also for you!
 #Installation General Environment
 <a name="phpstorm"></a>
 ##PHP Storm
-* Download PHP Storm - http://www.jetbrains.com/phpstorm/
+* Download and install PHP Storm - http://www.jetbrains.com/phpstorm/
 * Install Sun JDK - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
-* set value
-    * dd
+* increase file watching limit (http://confluence.jetbrains.net/display/IDEADEV/Inotify+Watches+Limit)
+    * add `fs.inotify.max_user_watches = 524288` to `/etc/sysctl.conf`
+    * apply change `sudo sysctl -p`
 
 <a name="git"></a>
 ##git
