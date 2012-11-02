@@ -65,15 +65,16 @@ I hope it's a help also for you!
 * `sudo pear upgrade PEAR`
 
 ##PHING
-sudo pear channel-discover pear.phing.info
-sudo pear install phing/phing
+* `sudo pear channel-discover pear.phing.info`
+* `sudo pear install phing/phing`
 
 #Installation of QA Environment
 ##CodeSiffer
 * `sudo pear install PHP_CodeSniffer`
 * README Symfony2 Coding Standard
-    * (public)[https://github.com/opensky/Symfony2-coding-standard]
-    * (private)[https://github.com/nzzdev/Symfony2-coding-standard/blob/master/README.md]
+
+    * [public](https://github.com/opensky/Symfony2-coding-standard)
+    * [private](https://github.com/nzzdev/Symfony2-coding-standard/blob/master/README.md)
 
 ##PHPUnit
 * `sudo apt-get remove phpunit` (necessary if you already have installed phpunit via apt-get)
