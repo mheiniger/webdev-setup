@@ -8,32 +8,32 @@ I hope it's a help also for you!
 * [PHP Storm](#phpstorm)
 * [Git / Github](#git)
 
-##Installation General Environment
+#Installation General Environment
 <a name="phpstorm"></a>
-###PHP Storm
+##PHP Storm
 * Download PHP Storm - http://www.jetbrains.com/phpstorm/
 * Install Sun JDK - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
 
 <a name="git"></a>
-###git
+##git
 * `sudo apt-get install git`
 * `git config --global color.branch auto`
 * `git config --global color.diff auto`
 * `git config --global color.status auto`
 * Manual on how to install ssh keys on github http://help.github.com/linux-set-up-git/
 
-###memcache
-sudo apt-get install memcached
-sudo apt-get install php5-memcache
+##memcache
+* `sudo apt-get install memcached`
+* `sudo apt-get install php5-memcache`
 
-# apache2
-sudo apt-get install apache2
-sudo a2enmod rewrite
-sudo apt-get install libapache2-mod-php5
+###apache2
+* `sudo apt-get install apache2`
+* `sudo a2enmod rewrite`
+* `sudo apt-get install libapache2-mod-php5`
 
-# mysql
-sudo apt-get install mysql-server
-sudo apt-get install php5-mysql
+###mysql
+* `sudo apt-get install mysql-server`
+* `sudo apt-get install php5-mysql`
 
 
 ##Installation PHP Environment
