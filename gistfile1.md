@@ -75,13 +75,15 @@ sudo pear install phing/phing
     * [public](https://github.com/opensky/Symfony2-coding-standard)
     * [private](https://github.com/nzzdev/Symfony2-coding-standard/blob/master/README.md)
 ##PHPUnit
+* `sudo apt-get remove phpunit` (necessary if you already have installed phpunit via apt-get)
 * `sudo pear channel-discover pear.phpunit.de`
-* `sudo pear channel-discover components.ez.no`
 * `sudo pear channel-discover pear.symfony-project.com`
-* `sudo apt-get install phpunit`
-* `sudo pear install phpunit/PHPUnit`
+* `sudo pear channel-discover components.ez.no`
+* `sudo pear update-channels`
+* `sudo pear upgrade-all`
+* `sudo pear install --alldeps phpunit/PHPUnit`
+* `sudo pear install --force --alldeps phpunit/PHPUnit`
  
-
 #Configuration
 
 ##Apache2
@@ -93,7 +95,9 @@ Assume you want to have your projects in /home/your_username/eos
     * set `Group your_usergroup`
 
 ##PHP
-* Edit /etc/php5/cli/php.ini and /etc/php5/apache2/php.ini
+* Edit /etc/php5/cli/php.ini for for all webservers
+* Edit /etc/php5/apache2/php.ini if you have installed apache2
+* Edit /etc/php5/fpm/php.ini if you have installed nginx and fpm
     * memory_limit = 512m
     * display_errors = On
     * html_errors = On
@@ -135,47 +139,19 @@ Assume you want to have your projects in /home/your_username/eos
 * for PHPUnit Code Completion add PHPUnit path under file->settings-directories
 * Usually it’s stored in `/usr/share/php/PHPUnit`
 
+#Apache2 config example
 
-
-
-
-
-
-
-#Install www project
-
-Assume you want to have your project in /home/username/eos/www
-
-cd /home/<username>/eos
-git clone git@github.com:nzzdev/www
-cd www
-bin/install.sh --env=dev from the project root directory
-#Config www project with Apache2
-
-Edit /etc/hosts
-Add 127.0.0.1 www.sql.nzz.lo
-
-Create file /etc/apache2/sites-available/nzz.lo
-and add config
-
+* Assume you want to have your project in `/home/username/my_webside`
+* Edit /etc/hosts
+    * Add 127.0.0.1 www.my_webside.lo
+* Create file /etc/apache2/sites-available/www.my_webside.lo
+* edit file (with example config)
 <VirtualHost *:80>
-    ServerName  www.sql.nzz.lo
-    DocumentRoot /home/username/eos/www-sql/web
-    ErrorLog ${APACHE_LOG_DIR}/www.sql.error.log
-    CustomLog ${APACHE_LOG_DIR}/www.sql.access.log common
+    ServerName  www.my_webside.lo
+    DocumentRoot /home/username/my_webside/web
+    ErrorLog ${APACHE_LOG_DIR}/www.my_webside.lo.error.log
+    CustomLog ${APACHE_LOG_DIR}/www.my_webside.lo.access.log common
 </VirtualHost>
-
-create symbolic link to enable a site:
-sudo ln -s /etc/apache2/sites-available/nzz.lo /etc/apache2/sites-enabled/nzz.lo
-restart apache2:
-sudo /etc/init.d/apache2 restart
-
-
-
-
-
-
-Install Backend
-
-
-sudo apt-get install rabbitmq-server
+* create symbolic link to enable a site:
+    * `sudo ln -s /etc/apache2/sites-available/www.my_webside.lo /etc/apache2/sites-enabled/www.my_webside.lo`
+* sudo /etc/init.d/apache2 restart
