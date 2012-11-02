@@ -13,6 +13,8 @@ I hope it's a help also for you!
 ##PHP Storm
 * Download PHP Storm - http://www.jetbrains.com/phpstorm/
 * Install Sun JDK - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
+* set value
+    * dd
 
 <a name="git"></a>
 ##git
