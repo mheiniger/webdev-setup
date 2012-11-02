@@ -34,6 +34,13 @@ I hope it's a help also for you!
 * `sudo a2enmod rewrite`
 * `sudo apt-get install libapache2-mod-php5`
 
+##nginx
+* `sudo apt-get install nginx php5-fpm`
+* edit listen port in /etc/php5/fpm/pool.d/www.conf
+    * `listen = 127.0.0.1:9009`
+* `sudo /etc/init.d/php5-fpm restart`
+* `sudo service nginx restart`
+
 ##mysql
 * `sudo apt-get install mysql-server`
 * `sudo apt-get install php5-mysql`
