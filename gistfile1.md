@@ -72,8 +72,9 @@ sudo pear install phing/phing
 ##CodeSiffer
 * `sudo pear install PHP_CodeSniffer`
 * README Symfony2 Coding Standard
-    * [public](https://github.com/opensky/Symfony2-coding-standard)
-    * [private](https://github.com/nzzdev/Symfony2-coding-standard/blob/master/README.md)
+    * (public)[https://github.com/opensky/Symfony2-coding-standard]
+    * (private)[https://github.com/nzzdev/Symfony2-coding-standard/blob/master/README.md]
+
 ##PHPUnit
 * `sudo apt-get remove phpunit` (necessary if you already have installed phpunit via apt-get)
 * `sudo pear channel-discover pear.phpunit.de`
