@@ -11,96 +11,149 @@ I hope it's a help also for you!
 #Installation General Environment
 <a name="phpstorm"></a>
 ##PHP Storm
-* Download and install PHP Storm - http://www.jetbrains.com/phpstorm/
-* Install Sun JDK - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
-* increase file watching limit (http://confluence.jetbrains.net/display/IDEADEV/Inotify+Watches+Limit)
-    * add `fs.inotify.max_user_watches = 524288` to `/etc/sysctl.conf`
-    * apply change `sudo sysctl -p`
+
+```shell
+#Download and install PHP Storm - http://www.jetbrains.com/phpstorm/
+#Install Sun JDK - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
+#increase file watching limit (http://confluence.jetbrains.net/display/IDEADEV/Inotify+Watches+Limit)
+#add line to /etc/sysctl.conf
+fs.inotify.max_user_watches = 524288
+
+#apply changes
+sudo sysctl -p
+```
 
 <a name="git"></a>
 ##git
-* `sudo apt-get install git`
-* `git config --global color.branch auto`
-* `git config --global color.diff auto`
-* `git config --global color.status auto`
-* Manual on how to install ssh keys on github http://help.github.com/linux-set-up-git/
+
+```shell
+sudo apt-get install git
+git config --global color.branch auto
+git config --global color.diff auto
+git config --global color.status auto
+
+#Manual on how to install ssh keys on github http://help.github.com/linux-set-up-git/
+```
 
 ##memcache
-* `sudo apt-get install memcached`
-* `sudo apt-get install php5-memcache`
+
+```shell
+sudo apt-get install memcached
+sudo apt-get install php5-memcache
+```
 
 ##apache2
-* `sudo apt-get install apache2`
-* `sudo a2enmod rewrite`
-* `sudo apt-get install libapache2-mod-php5`
+
+```shell
+sudo apt-get install apache2
+sudo a2enmod rewrite
+sudo apt-get install libapache2-mod-php5
+```
 
 ##nginx
-* `sudo apt-get install nginx php5-fpm`
-* edit listen port in /etc/php5/fpm/pool.d/www.conf
-    * `listen = 127.0.0.1:9009`
-* `sudo /etc/init.d/php5-fpm restart`
-* `sudo service nginx restart`
+
+```shell
+sudo apt-get install nginx php5-fpm
+
+#edit listen port in /etc/php5/fpm/pool.d/www.conf
+listen = 127.0.0.1:9009
+
+sudo /etc/init.d/php5-fpm restart
+sudo service nginx restart
+```
 
 ##mysql
-* `sudo apt-get install mysql-server`
-* `sudo apt-get install php5-mysql`
+
+```shell
+sudo apt-get install mysql-server
+sudo apt-get install php5-mysql
+```
 
 ##PHP SQLite
-* `sudo apt-get install php5-sqlite`
-* comment `extension=sqlite.so` in `/etc/php5/conf.d/sqlite.ini`
+
+```shell
+sudo apt-get install php5-sqlite
+
+#comment in /etc/php5/conf.d/sqlite.ini
+extension=sqlite.so
+```
 
 ##gmagick
-* `sudo apt-get install graphicsmagick libgraphicsmagick1-dev`
-* `sudo pecl install gmagick-beta`
-* Create file /etc/php5/conf.d/gmagick.ini and add a line `extension=gmagick.so`
+
+```shell
+sudo apt-get install graphicsmagick libgraphicsmagick1-dev
+sudo pecl install gmagick-beta
+
+#Create file /etc/php5/conf.d/gmagick.ini and add a line 
+extension=gmagick.so
+```
 
 #Installation PHP Environment
 ##PHP
-* `sudo apt-get install php5-cli php5-common php-apc php-pear php5-xdebug php5-curl php5`
-* `sudo apt-get install php5-xsl`
-* `sudo apt-get install php5-intl`
+
+```shell
+sudo apt-get install php5-cli php5-common php-apc php-pear php5-xdebug php5-curl php5
+sudo apt-get install php5-xsl
+sudo apt-get install php5-intl
+```
 
 ##PEAR
-* `sudo pear channel-update PEAR`
-* `sudo pear upgrade PEAR`
+
+```shell
+sudo pear channel-update PEAR
+sudo pear upgrade PEAR
+```
 
 ##PHING
-* `sudo pear channel-discover pear.phing.info`
-* `sudo pear install phing/phing`
+```shell
+sudo pear channel-discover pear.phing.info
+sudo pear install phing/phing
+```
 
 #Installation of QA Environment
 ##CodeSiffer
-* `sudo pear install PHP_CodeSniffer`
-* README Symfony2 Coding Standard
 
+```shell
+sudo pear install PHP_CodeSniffer
+```
+
+* README Symfony2 Coding Standard
     * [public](https://github.com/opensky/Symfony2-coding-standard)
     * [private](https://github.com/nzzdev/Symfony2-coding-standard/blob/master/README.md)
 
 ##PHPUnit
-* `sudo apt-get remove phpunit` (necessary if you already have installed phpunit via apt-get)
-* `sudo pear channel-discover pear.phpunit.de`
-* `sudo pear channel-discover pear.symfony-project.com`
-* `sudo pear channel-discover components.ez.no`
-* `sudo pear update-channels`
-* `sudo pear upgrade-all`
-* `sudo pear install --alldeps phpunit/PHPUnit`
-* `sudo pear install --force --alldeps phpunit/PHPUnit`
- 
+
+```shell
+#necessary if you already have installed phpunit via apt-get
+sudo apt-get remove phpunit
+
+sudo pear channel-discover pear.phpunit.de
+sudo pear channel-discover pear.symfony-project.com
+sudo pear channel-discover components.ez.no
+sudo pear update-channels
+sudo pear upgrade-all
+sudo pear install --alldeps phpunit/PHPUnit
+sudo pear install --force --alldeps phpunit/PHPUnit
+``` 
+
 #Configuration
 
 ##Apache2
+
 Assume you want to have your projects in /home/your_username/eos
 
-* Change user/group of Apache2
-    * edit `/etc/apache2/apache2.conf`
-    * set `User your_username`
-    * set `Group your_usergroup`
+```shell
+# Change user/group of Apache2
+# edit /etc/apache2/apache2.conf
+User >your_username>
+Group <your_usergroup>
+```
 
 ##PHP
-* Edit /etc/php5/cli/php.ini for for all webservers
-* Edit /etc/php5/apache2/php.ini if you have installed apache2
-* Edit /etc/php5/fpm/php.ini if you have installed nginx and fpm
 ```shell
+#Edit /etc/php5/cli/php.ini for for all webservers
+#Edit /etc/php5/apache2/php.ini if you have installed apache2
+#Edit /etc/php5/fpm/php.ini if you have installed nginx and fpm
 memory_limit = 512m
 display_errors = On
 html_errors = On
@@ -108,9 +161,8 @@ post_max_size = 32m
 upload_max_filesize = 32m
 default_charset = utf8
 allow_url_fopen = On
-```
-* Edit /etc/php5/cli/conf.d/xdebug.ini
-```shell
+
+#Edit /etc/php5/cli/conf.d/xdebug.ini
 xdebug.max_nesting_level = 1000
 ```
 
