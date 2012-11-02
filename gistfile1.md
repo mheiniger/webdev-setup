@@ -6,24 +6,21 @@ I hope it's a help also for you!
 
 #Installation stack
 * [PHP Storm](#phpstorm)
-* [Git](#git)
+* [Git / Github](#git)
 
+##Installation General Environment
 <a name="phpstorm"></a>
-##PHP Storm
+###PHP Storm
 * Download PHP Storm - http://www.jetbrains.com/phpstorm/
 * Install Sun JDK - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
 
-##Installation General Environment
 <a name="git"></a>
 ###git
-sudo apt-get install git
-git config --global color.branch auto
-git config --global color.diff auto
-git config --global color.status auto
-
-###github
-Read the manual how to install ssh keys on github
-http://help.github.com/linux-set-up-git/
+* `sudo apt-get install git`
+* `git config --global color.branch auto`
+* `git config --global color.diff auto`
+* `git config --global color.status auto`
+* Manual on how to install ssh keys on github http://help.github.com/linux-set-up-git/
 
 ###memcache
 sudo apt-get install memcached
