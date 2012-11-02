@@ -24,7 +24,6 @@ sudo sysctl -p
 
 <a name="git"></a>
 ##git
-
 ```shell
 sudo apt-get install git
 git config --global color.branch auto
@@ -35,14 +34,12 @@ git config --global color.status auto
 ```
 
 ##memcache
-
 ```shell
 sudo apt-get install memcached
 sudo apt-get install php5-memcache
 ```
 
 ##apache2
-
 ```shell
 sudo apt-get install apache2
 sudo a2enmod rewrite
@@ -50,7 +47,6 @@ sudo apt-get install libapache2-mod-php5
 ```
 
 ##nginx
-
 ```shell
 sudo apt-get install nginx php5-fpm
 
@@ -62,14 +58,12 @@ sudo service nginx restart
 ```
 
 ##mysql
-
 ```shell
 sudo apt-get install mysql-server
 sudo apt-get install php5-mysql
 ```
 
 ##PHP SQLite
-
 ```shell
 sudo apt-get install php5-sqlite
 
@@ -78,7 +72,6 @@ extension=sqlite.so
 ```
 
 ##gmagick
-
 ```shell
 sudo apt-get install graphicsmagick libgraphicsmagick1-dev
 sudo pecl install gmagick-beta
@@ -89,7 +82,6 @@ extension=gmagick.so
 
 #Installation PHP Environment
 ##PHP
-
 ```shell
 sudo apt-get install php5-cli php5-common php-apc php-pear php5-xdebug php5-curl php5
 sudo apt-get install php5-xsl
@@ -97,7 +89,6 @@ sudo apt-get install php5-intl
 ```
 
 ##PEAR
-
 ```shell
 sudo pear channel-update PEAR
 sudo pear upgrade PEAR
@@ -111,7 +102,6 @@ sudo pear install phing/phing
 
 #Installation of QA Environment
 ##CodeSiffer
-
 ```shell
 sudo pear install PHP_CodeSniffer
 ```
@@ -121,7 +111,6 @@ sudo pear install PHP_CodeSniffer
     * [private](https://github.com/nzzdev/Symfony2-coding-standard/blob/master/README.md)
 
 ##PHPUnit
-
 ```shell
 #necessary if you already have installed phpunit via apt-get
 sudo apt-get remove phpunit
@@ -140,7 +129,6 @@ sudo pear install --force --alldeps phpunit/PHPUnit
 ##Apache2
 
 Assume you want to have your projects in /home/your_username/eos
-
 ```shell
 # Change user/group of Apache2
 # edit /etc/apache2/apache2.conf
@@ -152,6 +140,7 @@ Group <your_usergroup>
 * Add this settings in /etc/php5/cli/php.ini for for *all webservers*
 * Add this settings in /etc/php5/apache2/php.ini if you have installed *apache2*
 * Add this settings in /etc/php5/fpm/php.ini if you have installed *nginx and fpm*
+
 ```shell
 memory_limit = 512m
 display_errors = On
@@ -166,7 +155,6 @@ xdebug.max_nesting_level = 1000
 
 #Debugging with XDebug on Browser and Command line
 ##Configuration
-
 ```shell
 #Edit /etc/php5/cli/conf.d/xdebug.ini
 xdebug.remote_enable=On
@@ -202,7 +190,6 @@ source ~/.bashrc
 * Usually it’s stored in `/usr/share/php/PHPUnit`
 
 #Apache2 config example
-
 ```shell
 #Assume you want to have your project in 
 /home/username/my_webside
