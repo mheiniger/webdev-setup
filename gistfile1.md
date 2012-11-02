@@ -100,28 +100,38 @@ Assume you want to have your projects in /home/your_username/eos
 * Edit /etc/php5/cli/php.ini for for all webservers
 * Edit /etc/php5/apache2/php.ini if you have installed apache2
 * Edit /etc/php5/fpm/php.ini if you have installed nginx and fpm
-    * memory_limit = 512m
-    * display_errors = On
-    * html_errors = On
-    * post_max_size = 32m
-    * upload_max_filesize = 32m
-    * default_charset = utf8
-    * allow_url_fopen = On
+```shell
+memory_limit = 512m
+display_errors = On
+html_errors = On
+post_max_size = 32m
+upload_max_filesize = 32m
+default_charset = utf8
+allow_url_fopen = On
+```
 * Edit /etc/php5/cli/conf.d/xdebug.ini
-    * xdebug.max_nesting_level = 1000
+```shell
+xdebug.max_nesting_level = 1000
+```
 
 #Debugging with XDebug on Browser and Command line
 ##Configuration
-* Edit /etc/php5/cli/conf.d/xdebug.ini
-    * xdebug.remote_enable=On
-    * xdebug.remote_host=localhost
-    * xdebug.remote_port=9002
-    * xdebug.remote_handler=dbgp
-* `sudo service apache2 restart`
-* Add to /home/<your_username>/.bashrc
-    * export XDEBUG_CONFIG="PHPSTORM";
-* reload bash settings
-    * `source ~/.bashrc`
+
+```shell
+#Edit `/etc/php5/cli/conf.d/xdebug.ini`
+xdebug.remote_enable=On
+xdebug.remote_host=localhost
+xdebug.remote_port=9002
+xdebug.remote_handler=dbgp
+
+sudo service apache2 restart
+
+#Add to `/home/<your_username>/.bashrc`
+export XDEBUG_CONFIG="PHPSTORM";
+
+#reload bash settings
+source ~/.bashrc
+```
 * Edit Settings in PHPStorm
     * Go to File->Settings->PHP->Debug
     * Change XDebug Debug Port to 9002
@@ -144,12 +154,14 @@ Assume you want to have your projects in /home/your_username/eos
 #Apache2 config example
 
 ```shell
-#Assume you want to have your project in `/home/username/my_webside`
-#Edit `/etc/hosts`
-#Add 
-`127.0.0.1 www.my_webside.lo`
+#Assume you want to have your project in 
+/home/username/my_webside
+
+#Add entry to `/etc/hosts`
+127.0.0.1 www.my_webside.lo
+
 #Create file 
-`/etc/apache2/sites-available/www.my_webside.lo`
+/etc/apache2/sites-available/www.my_webside.lo
 
 #edit file (with example config)
 <VirtualHost *:80>
@@ -160,7 +172,8 @@ Assume you want to have your projects in /home/your_username/eos
 </VirtualHost>
 
 #create symbolic link to enable a site
-`sudo ln -s /etc/apache2/sites-available/www.my_webside.lo /etc/apache2/sites-enabled/www.my_webside.lo`
+sudo ln -s /etc/apache2/sites-available/www.my_webside.lo /etc/apache2/sites-enabled/www.my_webside.lo
+
 #restart apache
-`sudo /etc/init.d/apache2 restart`
+sudo /etc/init.d/apache2 restart
 ```
