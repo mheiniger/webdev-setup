@@ -137,9 +137,9 @@ Group <your_usergroup>
 ```
 
 ##PHP
-* Add this settings in /etc/php5/cli/php.ini for for *all webservers*
-* Add this settings in /etc/php5/apache2/php.ini if you have installed *apache2*
-* Add this settings in /etc/php5/fpm/php.ini if you have installed *nginx and fpm*
+* Change this settings in /etc/php5/cli/php.ini for for *all webservers*
+* Change this settings in /etc/php5/apache2/php.ini if you have installed *apache2*
+* Change this settings in /etc/php5/fpm/php.ini if you have installed *nginx and fpm*
 
 ```shell
 memory_limit = 512m
@@ -148,8 +148,11 @@ html_errors = On
 post_max_size = 32m
 upload_max_filesize = 32m
 default_charset = utf8
+```
 
-#Edit /etc/php5/cli/conf.d/xdebug.ini
+* Edit /etc/php5/cli/conf.d/xdebug.ini
+
+```shell
 xdebug.max_nesting_level = 1000
 ```
 
