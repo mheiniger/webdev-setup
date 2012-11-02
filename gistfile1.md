@@ -150,17 +150,16 @@ Group <your_usergroup>
 ```
 
 ##PHP
+* Add this settings in /etc/php5/cli/php.ini for for *all webservers*
+* Add this settings in /etc/php5/apache2/php.ini if you have installed *apache2*
+* Add this settings in /etc/php5/fpm/php.ini if you have installed *nginx and fpm*
 ```shell
-#Edit /etc/php5/cli/php.ini for for all webservers
-#Edit /etc/php5/apache2/php.ini if you have installed apache2
-#Edit /etc/php5/fpm/php.ini if you have installed nginx and fpm
 memory_limit = 512m
 display_errors = On
 html_errors = On
 post_max_size = 32m
 upload_max_filesize = 32m
 default_charset = utf8
-allow_url_fopen = On
 
 #Edit /etc/php5/cli/conf.d/xdebug.ini
 xdebug.max_nesting_level = 1000
@@ -170,7 +169,7 @@ xdebug.max_nesting_level = 1000
 ##Configuration
 
 ```shell
-#Edit `/etc/php5/cli/conf.d/xdebug.ini`
+#Edit /etc/php5/cli/conf.d/xdebug.ini
 xdebug.remote_enable=On
 xdebug.remote_host=localhost
 xdebug.remote_port=9002
@@ -178,7 +177,7 @@ xdebug.remote_handler=dbgp
 
 sudo service apache2 restart
 
-#Add to `/home/<your_username>/.bashrc`
+#Add to /home/<your_username>/.bashrc
 export XDEBUG_CONFIG="PHPSTORM";
 
 #reload bash settings
@@ -209,7 +208,7 @@ source ~/.bashrc
 #Assume you want to have your project in 
 /home/username/my_webside
 
-#Add entry to `/etc/hosts`
+#Add entry to /etc/hosts
 127.0.0.1 www.my_webside.lo
 
 #Create file 
