@@ -1,6 +1,6 @@
 #Introduction
 If you're a php developer on ubuntu, there comes the time where you have to install/reinstall your system.
-I did it already a few times and i decided to write down the steps for a typical installation stack.
+I did it already a few times and i decided to write down the steps for a typical web developer stack with php.
 
 I hope it's a help also for you!
 
