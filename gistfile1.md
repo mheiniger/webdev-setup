@@ -144,16 +144,20 @@ Assume you want to have your projects in /home/your_username/eos
 #Apache2 config example
 
 * Assume you want to have your project in `/home/username/my_webside`
-* Edit /etc/hosts
-    * Add 127.0.0.1 www.my_webside.lo
-* Create file /etc/apache2/sites-available/www.my_webside.lo
+* Edit `/etc/hosts`
+    * Add `127.0.0.1 www.my_webside.lo`
+* Create file `/etc/apache2/sites-available/www.my_webside.lo`
 * edit file (with example config)
+
+```shell
 <VirtualHost *:80>
     ServerName  www.my_webside.lo
     DocumentRoot /home/username/my_webside/web
     ErrorLog ${APACHE_LOG_DIR}/www.my_webside.lo.error.log
     CustomLog ${APACHE_LOG_DIR}/www.my_webside.lo.access.log common
 </VirtualHost>
+```
+
 * create symbolic link to enable a site:
     * `sudo ln -s /etc/apache2/sites-available/www.my_webside.lo /etc/apache2/sites-enabled/www.my_webside.lo`
-* sudo /etc/init.d/apache2 restart
+* `sudo /etc/init.d/apache2 restart`
