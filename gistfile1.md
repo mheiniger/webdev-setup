@@ -218,6 +218,7 @@ source ~/.bashrc
 #Apache2 config example
 Assume you want to have your project in `/home/username/my_webside`
 
+```shell
 # Change user/group of Apache2
 # edit /etc/apache2/apache2.conf
 User <username>
