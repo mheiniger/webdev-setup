@@ -20,9 +20,10 @@ I hope it's a help also for you!
     * [PHP Codesniffer](#php-codesniffer)
     * [PHPUnit](#phpunit)
     * [PHPStorm IDE](#phpstorm)
-* [php.ini settings](#php-ini)
-* [How to debug with XDebug and PHPStorm on Firefox and command line](#debugging-with-phpstorm)
-* [Apache2 config example](#apache2-config-example)
+* Other
+    * [php.ini settings](#php-ini)
+    * [How to debug with XDebug and PHPStorm on Firefox and command line](#debugging-with-phpstorm)
+    * [Apache2 config example](#apache2-config-example)
 
 #Install General Environment
 <a name="git"></a>
