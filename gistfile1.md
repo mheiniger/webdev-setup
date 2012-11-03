@@ -130,6 +130,7 @@ sudo pear install PHP_CodeSniffer
 #necessary if you already have installed phpunit via apt-get
 sudo apt-get remove phpunit
 
+#install newest version of phpunit
 sudo pear channel-discover pear.phpunit.de
 sudo pear channel-discover pear.symfony-project.com
 sudo pear channel-discover components.ez.no
@@ -140,11 +141,12 @@ sudo pear install --force --alldeps phpunit/PHPUnit
 ``` 
 
 <a name="phpstorm"></a>
+* Download and install PHP Storm - http://www.jetbrains.com/phpstorm/
+* Install Sun JDK - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
+* increase file watching limit (http://confluence.jetbrains.net/display/IDEADEV/Inotify+Watches+Limit)
+
 ##PHP Storm IDE
 ```shell
-#Download and install PHP Storm - http://www.jetbrains.com/phpstorm/
-#Install Sun JDK - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
-#increase file watching limit (http://confluence.jetbrains.net/display/IDEADEV/Inotify+Watches+Limit)
 #add line to /etc/sysctl.conf
 fs.inotify.max_user_watches = 524288
 
