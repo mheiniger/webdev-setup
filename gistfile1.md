@@ -5,7 +5,6 @@ I did it already a few times and i decided to write down the steps for a typical
 I hope it's a help also for you!
 
 #Installation stack
-////////* [PHP Storm](#phpstorm)
 * General Environment
     * [git / github](#git)
     * [memcache](#memcache)
