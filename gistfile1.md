@@ -17,6 +17,7 @@ I hope it's a help also for you!
     * [PHP5](#php)
     * [PEAR](#pear)
     * [Phing](#phing)
+* PHP QA Environment
     * [PHP Codesniffer](#php-codesniffer)
     * [PHPUnit](#phpunit)
     * [PHPStorm IDE](#phpstorm)
@@ -112,7 +113,7 @@ sudo pear channel-discover pear.phing.info
 sudo pear install phing/phing
 ```
 
-#Installation of QA Environment
+#Installation PHP QA Environment
 <a name="php-codesniffer"></a>
 ##CodeSiffer
 ```shell
