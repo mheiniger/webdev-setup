@@ -1,6 +1,7 @@
 #Introduction
 If you're a php developer on ubuntu, there comes the time where you have to install/reinstall your system.
 I did it already a few times and i decided to write down the steps for a typical web developer stack with php.
+This is for a developer machine and not for live environment!
 
 I hope it's a help also for you!
 
@@ -215,6 +216,11 @@ source ~/.bashrc
 ##PHPStorm Config
 * for PHPUnit Code Completion add PHPUnit path under file->settings-directories
 * Usually it’s stored in `/usr/share/php/PHPUnit`
+
+
+
+
+
 
 <a name="apache2-config-example"></a>
 #Apache2 config example
