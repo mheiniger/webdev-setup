@@ -8,20 +8,7 @@ I hope it's a help also for you!
 * [PHP Storm](#phpstorm)
 * [Git / Github](#git)
 
-#Installation General Environment
-<a name="phpstorm"></a>
-##PHP Storm
-```shell
-#Download and install PHP Storm - http://www.jetbrains.com/phpstorm/
-#Install Sun JDK - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
-#increase file watching limit (http://confluence.jetbrains.net/display/IDEADEV/Inotify+Watches+Limit)
-#add line to /etc/sysctl.conf
-fs.inotify.max_user_watches = 524288
-
-#apply changes
-sudo sysctl -p
-```
-
+#Install General Environment
 <a name="git"></a>
 ##git
 ```shell
@@ -32,13 +19,14 @@ git config --global color.status auto
 
 #Manual on how to install ssh keys on github http://help.github.com/linux-set-up-git/
 ```
-
+<a name="memcache"></a>
 ##memcache
 ```shell
 sudo apt-get install memcached
 sudo apt-get install php5-memcache
 ```
 
+<a name="apache2"></a>
 ##apache2
 ```shell
 sudo apt-get install apache2
@@ -46,6 +34,7 @@ sudo a2enmod rewrite
 sudo apt-get install libapache2-mod-php5
 ```
 
+<a name="nginx"></a>
 ##nginx
 ```shell
 sudo apt-get install nginx php5-fpm
@@ -57,20 +46,23 @@ sudo /etc/init.d/php5-fpm restart
 sudo service nginx restart
 ```
 
+<a name="mysql"></a>
 ##mysql
 ```shell
 sudo apt-get install mysql-server
 sudo apt-get install php5-mysql
 ```
 
+<a name="sqlite"></a>
 ##PHP SQLite
 ```shell
-sudo apt-get install php5-sqlite
+sudo apt-get install sqlite3 php5-sqlite
 
 #comment in /etc/php5/conf.d/sqlite.ini
 extension=sqlite.so
 ```
 
+<a name="gmagick"></a>
 ##gmagick
 ```shell
 sudo apt-get install graphicsmagick libgraphicsmagick1-dev
@@ -81,6 +73,7 @@ extension=gmagick.so
 ```
 
 #Installation PHP Environment
+<a name="php"></a>
 ##PHP
 ```shell
 sudo apt-get install php5-cli php5-common php-apc php-pear php5-xdebug php5-curl php5
@@ -88,12 +81,14 @@ sudo apt-get install php5-xsl
 sudo apt-get install php5-intl
 ```
 
+<a name="pear"></a>
 ##PEAR
 ```shell
 sudo pear channel-update PEAR
 sudo pear upgrade PEAR
 ```
 
+<a name="phing"></a>
 ##PHING
 ```shell
 sudo pear channel-discover pear.phing.info
@@ -101,6 +96,7 @@ sudo pear install phing/phing
 ```
 
 #Installation of QA Environment
+<a name="php-codesniffer"></a>
 ##CodeSiffer
 ```shell
 sudo pear install PHP_CodeSniffer
@@ -110,6 +106,7 @@ sudo pear install PHP_CodeSniffer
     * [public](https://github.com/opensky/Symfony2-coding-standard)
     * [private](https://github.com/nzzdev/Symfony2-coding-standard/blob/master/README.md)
 
+<a name="phpunit"></a>
 ##PHPUnit
 ```shell
 #necessary if you already have installed phpunit via apt-get
@@ -124,18 +121,22 @@ sudo pear install --alldeps phpunit/PHPUnit
 sudo pear install --force --alldeps phpunit/PHPUnit
 ``` 
 
-#Configuration
-
-##Apache2
-
-Assume you want to have your projects in /home/your_username/eos
+<a name="phpstorm"></a>
+##PHP Storm IDE
 ```shell
-# Change user/group of Apache2
-# edit /etc/apache2/apache2.conf
-User >your_username>
-Group <your_usergroup>
+#Download and install PHP Storm - http://www.jetbrains.com/phpstorm/
+#Install Sun JDK - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
+#increase file watching limit (http://confluence.jetbrains.net/display/IDEADEV/Inotify+Watches+Limit)
+#add line to /etc/sysctl.conf
+fs.inotify.max_user_watches = 524288
+
+#apply changes
+sudo sysctl -p
 ```
 
+#Configuration
+
+<a name="php-ini"></a>
 ##PHP
 * Change this settings in /etc/php5/cli/php.ini for for *all webservers*
 * Change this settings in /etc/php5/apache2/php.ini if you have installed *apache2*
@@ -156,7 +157,10 @@ default_charset = utf8
 xdebug.max_nesting_level = 1000
 ```
 
+<a name="debugging-with-phpstorm"></a>
 #Debugging with XDebug on Browser and Command line
+
+The example is made for PHPStorm IDE with Apache2 webserver. But other IDE's or webservers should work in a similar way.
 ##Configuration
 ```shell
 #Edit /etc/php5/cli/conf.d/xdebug.ini
@@ -182,7 +186,7 @@ source ~/.bashrc
 ##Debugging via Firefox
 * Firefox: Click on ‘StartXDebug Session’ Symbol on bottom right
 * PHPStorm: Click on Run->Start Listen PHP Debug Connections
-* Set a breakpoint and do call via firefox browser
+* PHPStorm: Set a breakpoint and do call via firefox browser
 
 ##Debugging via Console
 * PHPStorm: Click on Run->Start Listen PHP Debug Connections
@@ -192,10 +196,14 @@ source ~/.bashrc
 * for PHPUnit Code Completion add PHPUnit path under file->settings-directories
 * Usually it’s stored in `/usr/share/php/PHPUnit`
 
+<a name="apache2-config-example"></a>
 #Apache2 config example
-```shell
-#Assume you want to have your project in 
-/home/username/my_webside
+Assume you want to have your project in `/home/username/my_webside`
+
+# Change user/group of Apache2
+# edit /etc/apache2/apache2.conf
+User <username>
+Group <usergroup>
 
 #Add entry to /etc/hosts
 127.0.0.1 www.my_webside.lo
