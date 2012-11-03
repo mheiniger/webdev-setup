@@ -115,7 +115,7 @@ sudo pear install phing/phing
 
 #Installation PHP QA Environment
 <a name="php-codesniffer"></a>
-##CodeSiffer
+##CodeSniffer
 ```shell
 sudo pear install PHP_CodeSniffer
 ```
