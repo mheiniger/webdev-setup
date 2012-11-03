@@ -71,7 +71,7 @@ sudo apt-get install php5-mysql
 ```
 
 <a name="sqlite"></a>
-##PHP SQLite
+##SQLite
 ```shell
 sudo apt-get install sqlite3 php5-sqlite
 
@@ -91,7 +91,7 @@ extension=gmagick.so
 
 #Installation PHP Environment
 <a name="php"></a>
-##PHP
+##PHP5
 ```shell
 sudo apt-get install php5-cli php5-common php-apc php-pear php5-xdebug php5-curl php5
 sudo apt-get install php5-xsl
