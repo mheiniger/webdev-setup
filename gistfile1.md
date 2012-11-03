@@ -141,11 +141,11 @@ sudo pear install --force --alldeps phpunit/PHPUnit
 ``` 
 
 <a name="phpstorm"></a>
+##PHP Storm IDE
 * Download and install PHP Storm - http://www.jetbrains.com/phpstorm/
 * Install Sun JDK - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
 * increase file watching limit (http://confluence.jetbrains.net/display/IDEADEV/Inotify+Watches+Limit)
 
-##PHP Storm IDE
 ```shell
 #add line to /etc/sysctl.conf
 fs.inotify.max_user_watches = 524288
