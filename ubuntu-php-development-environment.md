@@ -14,6 +14,7 @@ I hope it's a help also for you!
     * [mysql](#mysql)
     * [sqlite](#sqlite)
     * [gmagick](#gmagick)
+    * [curl](#curl)
 * PHP Environment
     * [PHP5](#php)
     * [PEAR](#pear)
@@ -89,6 +90,12 @@ sudo pecl install gmagick-beta
 
 #Create file /etc/php5/conf.d/gmagick.ini and add a line 
 extension=gmagick.so
+```
+
+<a name="curl"></a>
+##curl
+```shell
+sudo apt-get install curl
 ```
 
 #Installation PHP Environment
