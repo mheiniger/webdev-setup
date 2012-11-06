@@ -146,6 +146,10 @@ sudo pear update-channels
 sudo pear upgrade-all
 sudo pear install --alldeps phpunit/PHPUnit
 sudo pear install --force --alldeps phpunit/PHPUnit
+
+#phpunit Skeleton Generator
+sudo pear config-set auto_discover 1
+sudo pear install pear.phpunit.de/PHPUnit_SkeletonGenerator
 ``` 
 
 <a name="phpstorm"></a>
