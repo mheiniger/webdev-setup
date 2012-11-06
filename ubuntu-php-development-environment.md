@@ -225,8 +225,19 @@ source ~/.bashrc
 * Set a breakpoint and run a console command
 
 ##PHPStorm Config
-* for PHPUnit Code Completion add PHPUnit path under file->settings-directories
-* Usually it’s stored in `/usr/share/php/PHPUnit`
+```shell
+#for PHPUnit Code Completion add PHPUnit path under file->settings->directories
+#Usually it’s stored in 
+/usr/share/php/PHPUnit
+
+#for PHPUnit Skeleton Generator add phpunit-skelgen under file->settings->ProjectSettings->PHP->PHPUnit->SkeletonGenerator
+#Usually it's stored in
+/usr/bin/phpunit-skelgen
+```
+
+
+
+/usr/bin/phpunit-skelgen
 
 
 
