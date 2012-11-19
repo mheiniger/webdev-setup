@@ -36,6 +36,8 @@ sudo apt-get install git
 git config --global color.branch auto
 git config --global color.diff auto
 git config --global color.status auto
+git config --global user.email "name@email.tld"
+git config --global user.name "full name"
 
 #Manual on how to install ssh keys on github http://help.github.com/linux-set-up-git/
 ```
@@ -181,6 +183,7 @@ html_errors = On
 post_max_size = 32m
 upload_max_filesize = 32m
 default_charset = utf8
+date.timezone = "Europe/Zurich" (or whatever it is in your country)
 ```
 
 * Edit /etc/php5/cli/conf.d/xdebug.ini
