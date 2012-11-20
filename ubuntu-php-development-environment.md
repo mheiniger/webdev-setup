@@ -249,7 +249,7 @@ source ~/.bashrc
 
 <a name="apache2-config-example"></a>
 #Apache2 config example
-Assume you want to have your project in `/home/username/my_webside`
+Assume you want to have your project in `/home/username/my_website`
 
 ```shell
 # Change user/group of Apache2
@@ -258,21 +258,21 @@ User <username>
 Group <usergroup>
 
 #Add entry to /etc/hosts
-127.0.0.1 www.my_webside.lo
+127.0.0.1 www.my_website.lo
 
 #Create file 
-/etc/apache2/sites-available/www.my_webside.lo
+/etc/apache2/sites-available/www.my_website.lo
 
 #edit file (with example config)
 <VirtualHost *:80>
-    ServerName  www.my_webside.lo
-    DocumentRoot /home/username/my_webside/web
-    ErrorLog ${APACHE_LOG_DIR}/www.my_webside.lo.error.log
-    CustomLog ${APACHE_LOG_DIR}/www.my_webside.lo.access.log common
+    ServerName  www.my_website.lo
+    DocumentRoot /home/username/my_website/web
+    ErrorLog ${APACHE_LOG_DIR}/www.my_website.lo.error.log
+    CustomLog ${APACHE_LOG_DIR}/www.my_website.lo.access.log common
 </VirtualHost>
 
 #create symbolic link to enable a site
-sudo ln -s /etc/apache2/sites-available/www.my_webside.lo /etc/apache2/sites-enabled/www.my_webside.lo
+sudo ln -s /etc/apache2/sites-available/www.my_website.lo /etc/apache2/sites-enabled/www.my_website.lo
 
 #restart apache
 sudo /etc/init.d/apache2 restart
