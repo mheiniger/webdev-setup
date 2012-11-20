@@ -24,7 +24,7 @@ There are two flavours of the script:
 * installDevEnvironmentApache.sh does the setup with Apache
 * installDevEnvironmentNginx.sh does the setup with Nginx
 
-# Things you have to do configure manually (look in gist for more detailed description):
+## Things you have to do configure manually (look in gist for more detailed description):
 
 ```
 git config --global user.email "name@email.tld"
@@ -43,11 +43,14 @@ sudo sysctl -p
 
 
 #restart services:
-sudo /etc/init.d/php5-fpm restart
+# for nginx:
+sudo service php5-fpm restart
 sudo service nginx restart
+# for apache
+sudo service apache2 restart
 ```
 
-##PHP
+##PHP Settings
 * Change this settings in /etc/php5/cli/php.ini for for *all webservers*
 * Change this settings in /etc/php5/apache2/php.ini if you have installed *apache2*
 * Change this settings in /etc/php5/fpm/php.ini if you have installed *nginx and fpm*
@@ -77,8 +80,10 @@ xdebug.remote_port=9002
 xdebug.remote_handler=dbgp
 ```
 
-#Add to /home/<your_username>/.bashrc
+```
+#Add to ~/.bashrc
 export XDEBUG_CONFIG="PHPSTORM";
 
 #reload bash settings
 source ~/.bashrc
+```
