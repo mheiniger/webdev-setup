@@ -183,7 +183,7 @@ html_errors = On
 post_max_size = 32m
 upload_max_filesize = 32m
 default_charset = utf8
-date.timezone = "Europe/Zurich" (or whatever it is in your country)
+date.timezone = "Europe/Zurich" # (or whatever it is in your country)
 ```
 
 * Edit /etc/php5/cli/conf.d/xdebug.ini
