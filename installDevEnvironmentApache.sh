@@ -43,3 +43,4 @@ sudo apt-get install mc
 sudo apt-get install gitg
 sudo apt-get install g++
 sudo apt-get install filezilla
+sudo apt-get install mysql-workbench
