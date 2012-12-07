@@ -1,7 +1,7 @@
 webdev-setup
 ============
 
-A simple script to setup ubuntu for php-web-development.
+A simple script to setup a fresh ubuntu box for php-web-development (and some goodies for working with Symfony2).
 
 Its no magic, it just uses all install commands from DaRaffs gist: https://gist.github.com/3995789
 

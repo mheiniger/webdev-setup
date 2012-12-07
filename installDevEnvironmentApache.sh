@@ -6,9 +6,11 @@ git config --global color.diff auto
 git config --global color.status auto
 sudo apt-get install memcached
 sudo apt-get install php5-memcache
+# Apache and related
 sudo apt-get install apache2
 sudo a2enmod rewrite
 sudo apt-get install libapache2-mod-php5
+# Sql
 sudo apt-get install mysql-server
 sudo apt-get install php5-mysql
 sudo apt-get install sqlite3 php5-sqlite
@@ -35,6 +37,8 @@ sudo pear install --force --alldeps phpunit/PHPUnit
 #phpunit Skeleton Generator
 sudo pear config-set auto_discover 1
 sudo pear install pear.phpunit.de/PHPUnit_SkeletonGenerator
+sudo wget http://cs.sensiolabs.org/get/php-cs-fixer.phar -O /usr/local/bin/php-cs-fixer
+sudo chmod a+x /usr/local/bin/php-cs-fixer
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java7-installer
