@@ -18,7 +18,7 @@ sudo apt-get install graphicsmagick libgraphicsmagick1-dev
 sudo pecl install gmagick-beta
 sudo apt-get install curl
 sudo apt-get install php5-xsl
-sudo apt-get install php5-intl
+sudo apt-get install php5-intl php5-mcrypt
 sudo pear channel-update PEAR
 sudo pear upgrade PEAR
 sudo pear channel-discover pear.phing.info
