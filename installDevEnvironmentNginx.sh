@@ -23,6 +23,9 @@ sudo pear channel-discover pear.phing.info
 sudo pear install phing/phing
 sudo pear install PHP_CodeSniffer
 
+# nodejs
+sudo apt-get install nodejs nodejs-legacy
+
 #install newest version of phpunit
 sudo apt-get remove phpunit
 sudo pear channel-discover pear.phpunit.de
