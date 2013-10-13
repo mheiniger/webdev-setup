@@ -3,7 +3,7 @@ webdev-setup
 
 A simple script to setup a fresh ubuntu box for php-web-development (and some goodies for working with Symfony2).
 
-Its no magic, it just uses all install commands from DaRaffs gist: https://gist.github.com/3995789
+Its no magic, it just uses all install commands from DaRaFF's gist: https://gist.github.com/3995789
 
 This setup includes:
 * git and gitg
@@ -17,12 +17,14 @@ This setup includes:
 * vim
 * mc
 
+To start the installer, just run
+
+```sh
+./installDevEnvironment.sh
+```
+
 During the script it will stop from time to time to ask you for settings.
 After running the script, look at the gist and configure the services you just installed.
-
-There are two flavours of the script:
-* installDevEnvironmentApache.sh does the setup with Apache
-* installDevEnvironmentNginx.sh does the setup with Nginx
 
 ## Things you have to do configure manually (look in gist for more detailed description):
 
@@ -51,7 +53,7 @@ sudo service apache2 restart
 ```
 
 ##PHP Settings
-* Change this settings in /etc/php5/cli/php.ini for for *all webservers*
+* Change this settings in /etc/php5/cli/php.ini for *all webservers*
 * Change this settings in /etc/php5/apache2/php.ini if you have installed *apache2*
 * Change this settings in /etc/php5/fpm/php.ini if you have installed *nginx and fpm*
 

@@ -1,16 +1,42 @@
-# Script tried on Ubuntu 12.10, should also work in 12.04
+#!/bin/bash
 
+install_nginx(){
+    # Nginx and related
+    sudo apt-get install nginx php5-fpm
+}
+
+install_apache(){
+    # Apache and related
+    sudo apt-get install apache2
+    sudo a2enmod rewrite
+    sudo apt-get install libapache2-mod-php5
+}
+
+while true; do
+    read -p "Install nginx? (y/n)" yn
+    case $yn in
+        [Yy]* ) install_nginx; break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+while true; do
+    read -p "Install apache? (y/n)" yn
+    case $yn in
+        [Yy]* ) install_apache; break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+# Script tried on Ubuntu 12.10, should also work in 12.04
 sudo apt-get install git
 git config --global color.branch auto
 git config --global color.diff auto
 git config --global color.status auto
 sudo apt-get install memcached
 sudo apt-get install php5-memcache
-
-# Apache and related
-sudo apt-get install apache2
-sudo a2enmod rewrite
-sudo apt-get install libapache2-mod-php5
 
 # php
 sudo apt-get install php5-cli php5-common php-apc php-pear php5-xdebug php5-curl php5 php5-dev
@@ -59,4 +85,6 @@ sudo apt-get install mc
 sudo apt-get install gitg
 sudo apt-get install g++
 sudo apt-get install filezilla
-sudo apt-get install mysql-workbench
+if [[ -z `which mysql-workbench` ]]; then
+    sudo apt-get install mysql-workbench
+fi
