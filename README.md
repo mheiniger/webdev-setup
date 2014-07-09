@@ -13,9 +13,10 @@ This setup includes:
 * graphicsmagick with gmagick for php
 * curl
 * php5 with pear, xdebug, phing, codesniffer, phpunit, phpunit-skeletonGenerator
-* java7 (for major IDE's for PHP like PHPStorm or Netbeans)
+* java8 (for major IDE's for PHP like PHPStorm or Netbeans)
 * vim
 * mc
+* frontend-tools like nodejs | grunt | bower | png tools for iconizr
 
 To start the installer, just run
 
